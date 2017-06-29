@@ -14,7 +14,6 @@ light tan: #eeebda
 body{
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
-    margin: 0 10% 0 10%;
     background-color: #eeebda;
 }
 h1, h2, h3{
@@ -30,7 +29,8 @@ img{
 .wrapper{
     width: 1000px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 #site-header{
@@ -63,7 +63,7 @@ img{
 #main-navigation{
     background: #444;
     display: flex;
-    flex-direction: row;
+    /*flex-direction: row;*/
 
 }
 #main-navigation a{
@@ -72,7 +72,6 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
-    flex-grow: 1;
       /*
           TODO:
           - Flexbox - Create general spacing between nav links
@@ -81,22 +80,17 @@ img{
 #main-navigation #logo{
     margin-right: 400px;
     display: flex;
-    flex-basis: 10%;
-    /*
-        TODO:
-        - Flexbox - The logo needs to take up more space
-        that the other links
-    */
 }
 main{
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    /*
-        TODO:
-        - Flexbox: Set the starting width of this element
-        - Use relative positioning to bump this upward
-    */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    z-index: 2;
+    margin-top: -2em;
+
 }
 aside{
     padding: 20px;
@@ -105,17 +99,17 @@ aside{
     display: flex;
     flex-direction: column;
     width: 25%;
-    /*
-        TODO:
-        - Flexbox: Set the starting width of this element
-        - Use relative positioning to bump this upward
-    */
+    position: relative;
+    margin-top: -2em;
+    z-index: 2;
+
 }
 aside h3{
     text-align: center;
     margin: 0 0 10px 0;
     padding: 0 0 10px 0;
     border-bottom: 1px solid #ccc;
+
 }
 aside img{
     border-radius: 50%;
@@ -127,6 +121,7 @@ article{
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
     padding: 20px;
     margin-bottom: 20px;
+    flex-direction: row;
 }
 article h2{
     line-height: 1em;
@@ -145,6 +140,8 @@ article time{
     color: #666;
 }
 article img{
+  float: right;
+  width: 50%;
     /*
         TODO:
         - Float article images to the right
@@ -152,11 +149,15 @@ article img{
     */
 }
 article footer p{
-    /*
-        TODO:
-        - Style the article footer
-        HINT: Look to the article header;
-    */
+  font-size: 0.8em;
+  line-height: 1em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+  color: #666;
+  text-transform: uppercase;
 }
 #site-footer{
 
