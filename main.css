@@ -14,7 +14,7 @@ light tan: #eeebda
 body{
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
-    margin: 0;
+    margin: 0 10% 0 10%;
     background-color: #eeebda;
 }
 h1, h2, h3{
@@ -29,31 +29,19 @@ img{
 }
 .wrapper{
     width: 1000px;
-
-    /*
-        TODO: 
-        - Center up the page
-        - Create a flexbox containerer for
-        the major page sections
-    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #site-header{
-    /*
-        TODO
-        - Flexbox property here
-    */
+  display: flex;
+  flex-direction: column;
 }
 #site-header div{
     text-align: center;
     padding: 60px 0 120px 0;
     font-size: 4em;
-
-    /*
-        TODO: 
-        - Add a background image "header-img.jpg"
-        make sure that the path to the image is correct
-    */
-
+    background-image: url('img/header-img.jpg');
     background-size: cover;
     background-position: right bottom;
 }
@@ -70,18 +58,13 @@ img{
     color: white;
     bottom: 20px;
     text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
-    /*
-        TODO: 
-        - Use the script font: 'Dancing Script' fot this text
-    */
+    font-family: "Dancing Script";
 }
 #main-navigation{
     background: #444;
+    display: flex;
+    flex-direction: row;
 
-    /*
-        TODO: 
-        - Use Flexbox to arrange the navigation links
-    */
 }
 #main-navigation a{
     display: block;
@@ -89,17 +72,18 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
-
-    /*
-        TODO: 
-        - Flexbox - Create general spacing between nav links
-    */
+    flex-grow: 1;
+      /*
+          TODO:
+          - Flexbox - Create general spacing between nav links
+      */
 }
 #main-navigation #logo{
     margin-right: 400px;
-
+    display: flex;
+    flex-basis: 10%;
     /*
-        TODO: 
+        TODO:
         - Flexbox - The logo needs to take up more space
         that the other links
     */
@@ -109,7 +93,7 @@ main{
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
     /*
-        TODO: 
+        TODO:
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
@@ -118,8 +102,11 @@ aside{
     padding: 20px;
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    display: flex;
+    flex-direction: column;
+    width: 25%;
     /*
-        TODO: 
+        TODO:
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
@@ -159,36 +146,23 @@ article time{
 }
 article img{
     /*
-        TODO: 
+        TODO:
         - Float article images to the right
         and match sizes and spacing to the mockup
     */
 }
 article footer p{
     /*
-        TODO: 
+        TODO:
         - Style the article footer
         HINT: Look to the article header;
     */
 }
 #site-footer{
-    
+
     background: #333;
     /*
-        TODO: 
+        TODO:
         - Style the site footer
     */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
